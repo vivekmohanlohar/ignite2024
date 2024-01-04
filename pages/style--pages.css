@@ -1,0 +1,260 @@
+   /* Google font link in import type for Poppins and Inter */
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+   * {
+       margin: 0;
+       padding: 0;
+       border: none;
+       outline-color: none;
+       text-decoration: none;
+       /* list-style: none; */
+       color: rgb(0, 0, 0);
+       font-family: var(--font-primary);
+       -webkit-tap-highlight-color: transparent;
+   }
+
+   :root {
+       /* color scheme */
+       --background: #f8f8f8;
+       --background-2: linear-gradient(45deg, rgb(205, 20, 20), rgb(245, 216, 154));
+
+       --theme: #cd1414;
+       --theme-2: #ed9924;
+       --theme-3: #4bb9a8;
+       --heading-primary: #3c67d3;
+       --heading-secodery: #0eedcc;
+       --heading-normal: #1bae98;
+
+       --paragraph: #2b2d33;
+       --gredient-1: linear-gradient(to top, var(--theme), teal);
+       --gredient-2: linear-gradient(to right, #1D976C, #93F9B9);
+       /* font family */
+       --font-primary: 'Poppins', sans-serif;
+       /* --font-primary: 'Inter', sans-serif; */
+       --font-secondary: 'Poppins', sans-serif;
+       /* font size */
+       --font-size-h1: 5rem;
+       --font-size-h1-span: calc(var(--font-size-h1) - 1rem);
+       --font-size-h2: 1.5rem;
+       /* primary heading */
+       --font-size-h3: 1.2rem;
+       /* secoderyheading */
+       --font-size-h4: 1rem;
+       /* normal heading */
+       --font-size-h5: 1.5rem;
+       --font-size-p: 1rem;
+       --button-font-size: 1.2rem;
+       /* font weight */
+       --font-weight-h1: 700;
+       --font-weight-h2: 500;
+       --font-weight-h3: 600;
+       --font-weight-h4: 500;
+       --font-weight-h5: 500;
+       /* border */
+       --border-width: 3px;
+       /* transitions */
+       --transition: all .4s ease;
+       /* container width for different devices */
+       --container-w: 65%;
+       /* box shadow */
+       --box-shadow: 1px 1px 5px var(--theme-3);
+       /* letter spacing */
+       --letter-spacing: 1em;
+       /* line height */
+       --line-height: 1.7;
+       /* nav height */
+       --nav-height: 80px;
+       /* section */
+       --section-height: 100vh;
+       --section-padding: 3rem 0;
+   }
+
+   /*===== BASE =====*/
+   *::before,
+   *::after {
+       box-sizing: border-box;
+       position: absolute;
+       content: "";
+   }
+
+   html {
+       scroll-behavior: smooth;
+   }
+
+   img {
+       width: 100%;
+       /* object-fit: cover; */
+       /* display: block; */
+   }
+
+
+   body {
+       font-family: var(--font-primary);
+       line-height: 1.7;
+       color: var(--white);
+       background-color: rgb(255, 255, 255);
+   }
+
+   /* ///// Default Styles ///// */
+
+   h1 {
+       font-size: 3rem;
+       line-height: 1.2;
+       margin: 1rem 0;
+       font-weight: 800;
+       text-align: center;
+   }
+
+   h4 {
+       color: var(--theme);
+   }
+
+   price {
+       color: var(--theme-2);
+       font-weight: 600;
+   }
+
+   button {
+       background: transparent;
+       border: 2px solid var(--theme-3);
+       border-radius: 3px;
+       transition: all 200ms ease-in-out;
+       font-weight: 800;
+       font-family: var(--font-primary);
+       display: inline-block;
+       padding: 1rem 1.5rem;
+       position: relative;
+       cursor: pointer;
+   }
+
+   button:hover {
+       border-color: var(--theme-3);
+       transform: translate(-2px, -2px);
+   }
+
+   button:hover::after {
+       bottom: -1px;
+       right: -4px;
+       width: 4px;
+       background: var(--theme-3);
+       height: 100%;
+       border-bottom: 3px solid var(--theme-3);
+       border-right: 3px solid var(--theme-3);
+       border-top-right-radius: 4px;
+   }
+
+   button:hover::before {
+       bottom: -4px;
+       right: -4px;
+       height: 4px;
+       background: var(--theme-3);
+       width: calc(100% + 2px);
+       border-bottom: 3px solid var(--theme-3);
+       border-right: 3px solid var(--theme-3);
+       border-bottom-left-radius: 4px;
+       border-bottom-right-radius: 4px;
+   }
+
+   /* Main Section Styling */
+
+   article {
+       margin: 1rem auto;
+       padding: 1.5rem 1rem;
+       background-color: transparent;
+       box-shadow: var(--box-shadow);
+       /* border: 2px solid var(--theme-3); */
+       border-radius: 5px;
+   }
+
+   .artical-section {
+       width: 100%;
+       margin: 2rem 0;
+   }
+
+   .artical-container {
+       width: 80%;
+       margin: 0 auto;
+   }
+
+   .artical-container img {
+       width: 60%;
+       height: 50vh;
+       display: block;
+       margin: 0 auto;
+       border-radius: 5px;
+       box-shadow: var(--box-shadow);
+   }
+
+   article h2 {
+       text-align: center;
+       position: relative;
+       font-weight: 500;
+       padding-bottom: .5rem;
+       color: var(--theme-3);
+   }
+
+   article h2::after {
+       position: absolute;
+       bottom: 0;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 3rem;
+       height: .3rem;
+       border-radius: 10px;
+       background-color: var(--theme-3);
+       font-weight: 600;
+       color: var(--theme-3);
+   }
+
+   article h2::before {
+       position: absolute;
+       bottom: -.35rem;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 1rem;
+       height: 1rem;
+       /* border-radius: 20px; */
+       background-color: var(--theme-3);
+       font-weight: 600;
+       color: var(--theme-3);
+       clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+   }
+
+
+   article ol,
+   article ul {
+       margin-left: 2rem;
+       text-align: left;
+   }
+
+   .price .price-box {
+       display: flex;
+       gap: 1rem;
+   }
+
+   @media screen and (max-width: 700px) {
+       .artical-container {
+           width: 90%;
+           margin: 0 auto;
+       }
+
+       h1 {
+           font-size: 2.3rem;
+       }
+
+       .artical-container img {
+           width: 100%;
+       }
+
+       article p,
+       article li {
+           font-size: 1rem;
+       }
+
+       article h2 {
+           font-size: 1.2rem;
+       }
+   }
+
+   /* CSS Ends Here All the Instructions Related to this project are available at https://github.com/vivekmohanlohar or visit https://vivekmohanlohar.github.io/viveklohar/ */
